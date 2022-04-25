@@ -15,6 +15,8 @@ banco = mysql.connector.connect(
     database="bancoOuvidoria"
 )
 
+comandos_banco = banco.cursor()
+
 usuarios = list()
 
 def funcao_principal():
@@ -38,7 +40,6 @@ def funcao_principal():
 
     print("Descrição", descricao)
 
-    comandos_banco = banco.comandos_banco()
     comando_SQL = "INSERT INTO usuarios (nome, descricao, tipo) VALUES(%s,%s,%s)"
     dados = (str(nome),str(descricao),tipo)
     comandos_banco.execute(comando_SQL,dados)
@@ -50,7 +51,6 @@ def funcao_principal():
 def listar_manifestacoes():
     tela_listar_items.show()
 
-    comandos_banco = banco.comandos_banco()
     comando_SQL = "SELECT * FROM usuarios"
     comandos_banco.execute(comando_SQL)
     dados_lidos = comandos_banco.fetchall()
@@ -68,7 +68,6 @@ def listar_manifestacoes():
 def listar_sugestao():
     tela_listar_items.show()
     
-    comandos_banco = banco.comandos_banco()
     comando_SQL = "SELECT * FROM usuarios WHERE tipo = 'sugestão'"
     comandos_banco.execute(comando_SQL)
     dados_lidos = comandos_banco.fetchall()
@@ -85,7 +84,6 @@ def listar_sugestao():
 def listar_reclamacoes(): 
     tela_listar_items.show()
 
-    comandos_banco = banco.comandos_banco()
     comando_SQL = "SELECT * FROM usuarios WHERE tipo = 'reclamação'"
     comandos_banco.execute(comando_SQL)
     dados_lidos = comandos_banco.fetchall()
@@ -102,7 +100,6 @@ def listar_reclamacoes():
 def listar_elogios():
     tela_listar_items.show()
 
-    comandos_banco = banco.comandos_banco()
     comando_SQL = "SELECT * FROM usuarios WHERE tipo = 'elogio'"
     comandos_banco.execute(comando_SQL)
     dados_lidos = comandos_banco.fetchall()
@@ -119,7 +116,6 @@ def buscar_por_id():
     tela_listar_items.show()
 
     numero_id = formulario.lineEdit_3.text()
-    comandos_banco = banco.comandos_banco()
     comando_SQL = "SELECT * FROM usuarios WHERE Codigo = " + str(numero_id)
     comandos_banco.execute(comando_SQL)
     dados_lidos = comandos_banco.fetchall()

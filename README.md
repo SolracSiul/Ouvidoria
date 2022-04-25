@@ -16,6 +16,7 @@ O projeto tinha como objetivo principal construir o backend da Ouvidoria de uma 
 ## **Execução do projeto**
 
 Primeiramente é necessário instalar o [Python](https://www.python.org/) e o [MySQL](https://www.mysql.com/downloads/) na sua máquina e instalar/utilizar sua IDE de prefência.
+
 # **O arquivo possui duas versões uma com interface e outra sem interface**
 ## Caso queira executar o arquivo sem interface abra: versao_sem_interface/main.py
 ## Caso queira executar o arquivo com interface:
@@ -24,6 +25,9 @@ Abra o terminal e execute os seguintes comandos:
 pip install PyQt5 ou pyqt5-sip
 ```
 ## Depois é só rodar o arquivo interface.py
+
+
+ANTES DE RODAR QUALQUER VERSÃO, ajustar credencial do mysql no codigo
 
 ###
 Desenvolvido por: Antonio Ferreira, Luis Rodrigues e Renan Sampaio
