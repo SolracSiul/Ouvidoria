@@ -21,7 +21,7 @@ Primeiramente é necessário instalar o [Python](https://www.python.org/) e o [M
 ## Caso queira executar o arquivo com interface:
 Abra o terminal e execute os seguintes comandos:
 ```sh
-pip install PyQt5
+pip install PyQt5 ou pyqt5-sip
 ```
 ## Depois é só rodar o arquivo interface.py
 
