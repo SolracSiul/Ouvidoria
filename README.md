@@ -9,7 +9,7 @@ O projeto tinha como objetivo principal construir o backend da Ouvidoria de uma 
 - MySQL
 
 ## **Objetivos**
-- Constrir o backend da função;
+- Construir o backend da função;
 - Integrar com o banco de Dados;
 - Criar uma interface para o usuário;
 
